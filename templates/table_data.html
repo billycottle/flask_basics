@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Duration</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <h2>This collection belongs to: {{ name }}</h2>
+       <h3>The path to the CSS is: {{ url_for('static', filename='css/styles.css') }} </h3>
+        <table>
+            <tr>
+                <th>Movies</th>
+                <th>Duration</th>
+                <th>Comments</th>
+            </tr>
+            {% for movie, lenght in movies.items() %}
+            <tr>
+                <td>{{ movie }}</td>
+                <td>{{ lenght }}</td>
+                {% if lenght <= 2 %}
+                    <td>short</td>
+                {% elif lenght >= 2 and lenght <= 3 %}
+                    <td>medium</td>
+                {% else %}
+                    <td>Long</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+           
+        </table>
+        
+    </body>
+</html>

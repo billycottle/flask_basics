@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Movies</title>
+    </head>
+    <body>
+        <h1>Movies to watch</h1>
+        <p>this collection belongs to {{ name }}</p>
+
+        <h3>movies: {{ movies }}</h3>
+        <h3>first: {{ movies[0] }}</h3>
+        <h3>Slice: {{ movies[1:3] }}</h3>
+
+        <hr>
+        <ul>
+            {% for movie in movies %}
+            <li>The movie is: {{ movie }}</li>
+            {% endfor %}
+        </ul>
+        
+    </body>
+</html>
