@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 app.config.update(
     SECRETKEY='#123456#',
-    SQLALCHEMY_DATABASE_URI='postgresql://postgres:Bc123456#@localhost:5432/catalog_db',
+    SQLALCHEMY_DATABASE_URI='postgresql://postgres:#123456#@localhost:5432/catalog_db',
     SQLALCHEMY_TRACK_MODIFICATIONS= False
 )
 
